@@ -18,6 +18,7 @@
 		684E6814264E24D800B14C51 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684E6812264E24D800B14C51 /* ContactTableViewCell.xib */; };
 		684E681726543C3200B14C51 /* MiContacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684E681626543C3200B14C51 /* MiContacto.swift */; };
 		684E681A265471E400B14C51 /* detalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684E6819265471E400B14C51 /* detalleViewController.swift */; };
+		684E682026556A8F00B14C51 /* Contacto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 684E681E26556A8F00B14C51 /* Contacto.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		684E6812264E24D800B14C51 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		684E681626543C3200B14C51 /* MiContacto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiContacto.swift; sourceTree = "<group>"; };
 		684E6819265471E400B14C51 /* detalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleViewController.swift; sourceTree = "<group>"; };
+		684E681F26556A8F00B14C51 /* Contacto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacto.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				684E6812264E24D800B14C51 /* ContactTableViewCell.xib */,
 				684E681626543C3200B14C51 /* MiContacto.swift */,
 				684E6819265471E400B14C51 /* detalleViewController.swift */,
+				684E681E26556A8F00B14C51 /* Contacto.xcdatamodeld */,
 			);
 			path = appContactosCoreData;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				684E682026556A8F00B14C51 /* Contacto.xcdatamodeld in Sources */,
 				684E67FE264DA8B500B14C51 /* ViewController.swift in Sources */,
 				684E6813264E24D800B14C51 /* ContactTableViewCell.swift in Sources */,
 				684E6804264DA8B500B14C51 /* appContactosCoreData.xcdatamodeld in Sources */,
@@ -368,6 +372,16 @@
 			);
 			currentVersion = 684E6803264DA8B500B14C51 /* appContactosCoreData.xcdatamodel */;
 			path = appContactosCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		684E681E26556A8F00B14C51 /* Contacto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				684E681F26556A8F00B14C51 /* Contacto.xcdatamodel */,
+			);
+			currentVersion = 684E681F26556A8F00B14C51 /* Contacto.xcdatamodel */;
+			path = Contacto.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
