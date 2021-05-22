@@ -23,6 +23,7 @@ class detalleViewController: UIViewController {
     @IBOutlet weak var telefonoTextField: UITextField!
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var imagenPerson: UIImageView!
+    @IBOutlet weak var correoTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         cargarCoreData()
@@ -37,9 +38,16 @@ class detalleViewController: UIViewController {
         self.telefonoTextField.text = "\(recibirContacto!.telefono)"
         self.nombreTextField.text = recibirContacto?.nombre
         self.direccionTextField.text = recibirContacto?.direccion
+        self.imagenPerson.image = UIImage(data: (recibirContacto?.imagen!)!)
+        self.correoTextField.text = recibirContacto?.correo
     }
     
-    @objc func clickImagen(gestura: UITapGestureRecognizer){
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+            
+ 
+     @objc func clickImagen(gestura: UITapGestureRecognizer){
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
@@ -59,17 +67,25 @@ class detalleViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         
         do {
-           // contactos[index!].setValue(nombreTextField.text,forkey:"nombre")
-           // contactos[index!].setValue(Int64(telefonoTextField.text!),forkey:"telefono")
-           // contactos[index!].setValue(direccionTextField.text,forkey:"direccion")
-           // contactos[index!].setValue(imagenPerson.image?.pngData(),forkey:"imagen")
+            contactos[index!].setValue(nombreTextField.text, forKey: "nombre")
+            contactos[index!].setValue(Int64(telefonoTextField.text!), forKey: "telefono")
+            contactos[index!].setValue(direccionTextField.text, forKey: "direccion")
+            contactos[index!].setValue(imagenPerson.image?.pngData(), forKey: "imagen")
+            contactos[index!].setValue(correoTextField.text, forKey: "correo")
+            //contactos[index!].setValue(nombreTextField.text!,forkey:"nombre")
+            //contactos[index!].setValue(Int64(telefonoTextField.text!),forkey:"telefono")
+            //contactos[index!].setValue(direccionTextField.text!,forkey:"direccion")
+            //contactos[index!].setValue(imagenPerson.image?.pngData(),forkey:"imagen")
             
+
 
             try self.contexto.save()
             print("guardado correctamente")
         } catch  {
             print("error: \(error.localizedDescription)")
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func cancelButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)

@@ -12,9 +12,16 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var nombreContacto: UILabel!
     @IBOutlet weak var telefonoContacto: UILabel!
     
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var imagenContacto: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        backView.layer.masksToBounds = false
+        backView.layer.cornerRadius = 9
+        backView.layer.shadowColor = UIColor.black.cgColor
+        backView.layer.shadowOpacity = 0.5
+        backView.layer.shadowOffset = .zero
+        backView.layer.shadowRadius = 5
         // Initialization code
     }
 

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xD6-pW-e7Y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xD6-pW-e7Y">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -95,25 +95,30 @@
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXz-0m-FuQ">
-                                        <rect key="frame" x="0.0" y="200" width="384" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="200" width="384" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-LC-7EZ">
-                                        <rect key="frame" x="0.0" y="315.5" width="384" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="303" width="384" height="53.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tb5-iN-aIs">
-                                        <rect key="frame" x="0.0" y="431" width="384" height="65"/>
+                                        <rect key="frame" x="0.0" y="406.5" width="384" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qar-nV-k7c">
+                                        <rect key="frame" x="0.0" y="509.5" width="384" height="53.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-yc-KZs">
-                                        <rect key="frame" x="0.0" y="546" width="384" height="158"/>
+                                        <rect key="frame" x="0.0" y="613" width="384" height="91"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld8-RR-NFU">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="158"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="91"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Guardar">
                                                     <color key="titleColor" systemColor="systemGreenColor"/>
@@ -123,7 +128,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyt-bG-AvN">
-                                                <rect key="frame" x="217" y="0.0" width="167" height="158"/>
+                                                <rect key="frame" x="217" y="0.0" width="167" height="91"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <state key="normal" title="Cancelar">
                                                     <color key="titleColor" systemColor="systemPinkColor"/>
@@ -154,6 +159,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="correoTextField" destination="Qar-nV-k7c" id="B7a-o2-8Xf"/>
                         <outlet property="direccionTextField" destination="Tb5-iN-aIs" id="oNc-Ns-3sE"/>
                         <outlet property="imagenPerson" destination="bKE-1U-Zwq" id="rHO-Ux-bEh"/>
                         <outlet property="nombreTextField" destination="MXz-0m-FuQ" id="FeM-Hl-axH"/>
